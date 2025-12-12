@@ -1,0 +1,17 @@
+{
+    "name": "design-system-monorepo",
+    "version": "1.0.0",
+    "private": true,
+    "workspaces": [
+      "packages/*",
+      "examples/*"
+    ],
+    "scripts": {
+      "build": "npm run build --workspace=design-system",
+      "dev:web": "npm run dev --workspace=examples/web",
+      "dev:native": "npm run start --workspace=examples/native"
+    },
+    "devDependencies": {
+      "typescript": "^5.3.3"
+    }
+  }
