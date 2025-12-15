@@ -51,67 +51,26 @@ Escanea el QR con Expo Go app.
 
 ---
 
-## Uso design system
+## Demo Visual
 
-Está preparado para ser publicado como npm package.
+### Web (Next.js)
 
-#### **Instalación:**
+<div align="center">
+  <img src="./images/web-demo1.png" alt="Web Demo - Header" width="800"/>
+</div>
 
-```bash
-npm install design-system
-# o
-yarn add design-system
-```
+<div align="center">
+  <img src="./images/web-demo2.png" alt="Web Demo - Groups" width="800"/>
+</div>
 
-#### **Uso en React (Web):**
+### Mobile (React Native - iOS)
 
-```tsx
-import { ThemeProvider, Text, Heading } from "design-system";
-
-function App() {
-  return (
-    <ThemeProvider initialMode="light">
-      <div>
-        <Heading level={1}>Bienvenido</Heading>
-        <Text variant="body" color="secondary">
-          Este es un ejemplo del design system
-        </Text>
-      </div>
-    </ThemeProvider>
-  );
-}
-```
-
-#### **Uso en React Native:**
-
-```tsx
-import { ThemeProvider, Text, Heading } from "design-system";
-import { View } from "react-native";
-
-function App() {
-  return (
-    <ThemeProvider initialMode="light">
-      <View>
-        <Heading level={1}>Bienvenido</Heading>
-        <Text variant="body" color="secondary">
-          Este es un ejemplo del design system
-        </Text>
-      </View>
-    </ThemeProvider>
-  );
-}
-```
-
-**Nota 1:** El mismo código de importación funciona en ambas plataformas. Los bundlers (Metro/Webpack) resuelven automáticamente la versión correcta.
-
-**Nota 2:** Configuración adicional para Next.js (requerido)
-
-```javascript
-// next.config.js
-module.exports = {
-  transpilePackages: ["design-system"],
-};
-```
+<div align="center">
+  <img src="./images/native-demo1.png" alt="Native Demo - iOS Header" height="600"/>
+  <img src="./images/native-demo2.png" alt="Native Demo - iOS Groups" height="600"/>
+  <img src="./images/native-demo3.png" alt="Native Demo - iOS Matches" height="600"/>
+  <p><i>Mismos componentes funcionando nativamente en iOS y Android con Expo Go</i></p>
+</div>
 
 ---
 
@@ -141,26 +100,6 @@ Componente de texto flexible con múltiples variantes.
 <Text variant="code" italic>Código en cursiva</Text>
 ```
 
-**Variants disponibles:**
-
-- `body`, `bodyLarge`, `bodySmall` - Texto general
-- `caption` - Texto pequeño (metadata, hints)
-- `label` - Etiquetas y badges
-- `overline` - Texto uppercase con letter-spacing
-- `code` - Código inline
-
-**Props:**
-
-- `variant?: TextVariant` - Estilo del texto
-- `color?: TextColor` - Color del texto
-- `align?: 'left' | 'center' | 'right' | 'justify'`
-- `weight?: FontWeight` - Peso de la fuente
-- `size?: number` - Override del fontSize
-- `italic?: boolean` - Cursiva
-- `underline?: boolean` - Subrayado
-- `numberOfLines?: number` - Limitar líneas con ellipsis
-
----
 
 **3. Heading Component**
 
@@ -172,13 +111,6 @@ Componente para títulos con jerarquía semántica.
 <Heading level={3} weight="medium">Sección</Heading>
 ```
 
-**Props:**
-
-- `level: 1 | 2 | 3 | 4 | 5 | 6` - Nivel del heading
-- `color?: HeadingColor` - Color del heading
-- `align?: 'left' | 'center' | 'right'`
-- `weight?: FontWeight` - Peso de la fuente
-- `as?: 'h1' | 'h2' | ... ` - Override de elemento HTML (web only)
 
 **4. useTheme Hook**
 
@@ -338,12 +270,6 @@ design-system-exercise/
 
 Este proyecto fue desarrollado con asistencia IA, cumpliendo con la transparencia requerida en el enunciado.
 
-### **Herramientas utilizadas:**
-
-#### **1. Proceso de desarrollo asistido:**
-
-El flujo de trabajo fue:
-
 1. **Planning** → Discusión con IA sobre arquitectura
 2. **Implementación** → Cursor Tab se utilizó como apoyo en el desarrollo. Por ejemplo, la mayoría de los comentarios del código y detalles en los estilos de design-system fueron sugeridos por Cursor Tab.
 3. **Review** → IA revisaba el código con feedback específico
@@ -354,26 +280,3 @@ Todas las conversaciones están documentadas en:
 - `llm-conversations/planning.md` - Planning inicial y arquitectura
 - `llm-conversations/codereviewer.md` - Reviews paso a paso
 - `llm-conversations/readme.md` - Asistencia para creación del readme
-
----
-
-## Demo Visual
-
-### Web (Next.js)
-
-<div align="center">
-  <img src="./images/web-demo1.png" alt="Web Demo - Header" width="800"/>
-</div>
-
-<div align="center">
-  <img src="./images/web-demo2.png" alt="Web Demo - Groups" width="800"/>
-</div>
-
-### Mobile (React Native - iOS)
-
-<div align="center">
-  <img src="./images/native-demo1.png" alt="Native Demo - iOS Header" height="600"/>
-  <img src="./images/native-demo2.png" alt="Native Demo - iOS Groups" height="600"/>
-  <img src="./images/native-demo3.png" alt="Native Demo - iOS Matches" height="600"/>
-  <p><i>Mismos componentes funcionando nativamente en iOS y Android con Expo Go</i></p>
-</div>
